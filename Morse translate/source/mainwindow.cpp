@@ -54,14 +54,9 @@ bool MainWindow::isMorse(QString text)
         char tmp = text.at(i).toLatin1();
         if(tmp >= 'a' && tmp <= 'z' || tmp >= 'A' && tmp <= 'Z')
             return false;
-        for(i = 0; i < 3 && i < text.size(); i++)
-        {
-            if(text[i] != '.')
-                return false;
-        }
-        while(text[i] == ' ')
-            i++;
-        if(text[i] != '.' && text[i] != '-')
+        if(text.size() > 1 && text[0] == '-' && text[1] != '-' && text[1] != '.')
+            return false;
+        if(text.size() > 3 && text[0] == '.' && text[1] == '.' && text[2] == '.' && text[3] != '.' && text[3] != '-')
             return false;
         return true;
     }
