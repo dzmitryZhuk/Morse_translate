@@ -34,34 +34,7 @@ void Translator::initDictionary()
     dictionary.insert("x", "-..-");
     dictionary.insert("y", "-.--");
     dictionary.insert("z", "--..");
-                                        // upper letters
-    //dictionary.insert("A", ".-");
-    dictionary.insert("A", dictionary.value("a"));
-    dictionary.insert("B", dictionary.value("b"));
-    dictionary.insert("C", dictionary.value("c"));
-    dictionary.insert("D", dictionary.value("d"));
-    dictionary.insert("E", dictionary.value("e"));
-    dictionary.insert("F", dictionary.value("f"));
-    dictionary.insert("G", dictionary.value("g"));
-    dictionary.insert("H", dictionary.value("h"));
-    dictionary.insert("I", dictionary.value("i"));
-    dictionary.insert("J", dictionary.value("j"));
-    dictionary.insert("K", dictionary.value("k"));
-    dictionary.insert("L", dictionary.value("l"));
-    dictionary.insert("M", dictionary.value("m"));
-    dictionary.insert("N", dictionary.value("n"));
-    dictionary.insert("O", dictionary.value("o"));
-    dictionary.insert("P", dictionary.value("p"));
-    dictionary.insert("Q", dictionary.value("q"));
-    dictionary.insert("R", dictionary.value("r"));
-    dictionary.insert("S", dictionary.value("s"));
-    dictionary.insert("T", dictionary.value("t"));
-    dictionary.insert("U", dictionary.value("u"));
-    dictionary.insert("V", dictionary.value("v"));
-    dictionary.insert("W", dictionary.value("w"));
-    dictionary.insert("X", dictionary.value("x"));
-    dictionary.insert("Y", dictionary.value("y"));
-    dictionary.insert("Z", dictionary.value("z"));
+
                                         // symbols
     dictionary.insert(".", "......");
     dictionary.insert(";", "-.-.-.");

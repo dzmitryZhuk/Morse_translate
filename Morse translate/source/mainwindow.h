@@ -37,7 +37,7 @@ private:
     // window title
     QString title = "Morse translate";
 
-    // return FALSE if text is encoded (Morse), otherwise TRUE (plain text)
-    bool autodetection(QString text);
+    // return TRUE if text is encoded (Morse), otherwise FALSE (plain text)
+    bool isMorse(QString text);
     };
 #endif // MAINWINDOW_H

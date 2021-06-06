@@ -14,7 +14,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
 void MainWindow::on_import_2_clicked()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
@@ -41,22 +40,30 @@ void MainWindow::on_import_2_clicked()
 
 void MainWindow::on_input_textChanged()
 {
-    if(autodetection(ui->input->toPlainText()))
-        ui->output->setText((new Translator)->textToMorse(ui->input->toPlainText()));
+    if(!isMorse(ui->input->toPlainText()))
+        ui->output->setText((new Translator)->textToMorse(ui->input->toPlainText().toLower()));
     else
-        ui->output->setText((new Translator)->morseToText(ui->input->toPlainText()));
+        ui->output->setText((new Translator)->morseToText(ui->input->toPlainText().toLower()));
 }
 
-bool MainWindow::autodetection(QString text)
+bool MainWindow::isMorse(QString text)
 {
     if(!text.isEmpty())
     {
-        char firstChar = text.at(0).toLatin1();
-        if(firstChar == '.' || firstChar == '-')
+        int i = 0;
+        char tmp = text.at(i).toLatin1();
+        if(tmp >= 'a' && tmp <= 'z' || tmp >= 'A' && tmp <= 'Z')
             return false;
-        else
-            return true;
-
+        for(i = 0; i < 3 && i < text.size(); i++)
+        {
+            if(text[i] != '.')
+                return false;
+        }
+        while(text[i] == ' ')
+            i++;
+        if(text[i] != '.' && text[i] != '-')
+            return false;
+        return true;
     }
 }
 
