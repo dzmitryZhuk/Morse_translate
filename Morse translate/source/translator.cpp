@@ -7,7 +7,7 @@ Translator::Translator()
 
 void Translator::initDictionary()
 {
-                                        // letters
+                                        // latin
     dictionary.insert("a", ".-");
     dictionary.insert("b", "-...");
     dictionary.insert("c", "-.-.");
@@ -46,7 +46,7 @@ void Translator::initDictionary()
     dictionary.insert("(", "-.--.");
     dictionary.insert(")", "-.--.-");
     dictionary.insert("\"", ".-..-.");
-    dictionary.insert(" ", "  ");
+    dictionary.insert("©", ".-.--.");
 }
 
 QString Translator::textToMorse(QString text)
@@ -54,10 +54,7 @@ QString Translator::textToMorse(QString text)
     QString encodedText;
     for(int i = 0; i < text.size(); i++)
     {
-        encodedText += dictionary.value(text.at(i));
-        if (i == text.size() - 1) break;
-        if(text.at(i).toLatin1() != ' ' && text.at(i + 1).toLatin1() != ' ')
-            encodedText += " ";
+        encodedText += dictionary.value(text.at(i)) + " ";
     }
     return encodedText;
 }

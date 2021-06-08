@@ -31,3 +31,18 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    res.qrc
+
+
+win32:{
+    VERSION = 1.0.0
+    QMAKE_TARGET_COMPANY = ZCorporation
+    QMAKE_TARGET_PRODUCT = Morse translate
+    QMAKE_TARGET_DESCRIPTION = Instant translator of latin characters to morse code and vice versa.
+    QMAKE_TARGET_COPYRIGHT = Dzmitry Zhuk
+}
+
+#   icon of execution file from resources file
+win32:RC_ICONS = $$PWD/res/img/icon2.ico

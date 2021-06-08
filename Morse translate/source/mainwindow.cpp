@@ -24,7 +24,7 @@ void MainWindow::on_import_2_clicked()
     {
         QFile *file = new QFile(fileName);
         if(!file->open(QIODevice::ReadOnly)) {
-            QMessageBox::information(0, "error", file->errorString());
+            QMessageBox::information(0, "Error opening file", file->errorString());
         }
 
         QTextStream in(file);
@@ -41,9 +41,13 @@ void MainWindow::on_import_2_clicked()
 void MainWindow::on_input_textChanged()
 {
     if(!isMorse(ui->input->toPlainText()))
+    {
         ui->output->setText((new Translator)->textToMorse(ui->input->toPlainText().toLower()));
+    }
     else
+    {
         ui->output->setText((new Translator)->morseToText(ui->input->toPlainText().toLower()));
+    }
 }
 
 bool MainWindow::isMorse(QString text)
@@ -52,7 +56,7 @@ bool MainWindow::isMorse(QString text)
     {
         int i = 0;
         char tmp = text.at(i).toLatin1();
-        if(tmp >= 'a' && tmp <= 'z' || tmp >= 'A' && tmp <= 'Z')
+        if(tmp != '.' && tmp != '-')
             return false;
         if(text.size() > 1 && text[0] == '-' && text[1] != '-' && text[1] != '.')
             return false;
@@ -74,7 +78,7 @@ void MainWindow::on_export_3_clicked()
         {
             QFile *file = new QFile(fileName);
             if(!file->open(QIODevice::WriteOnly)) {
-                QMessageBox::information(0, "error", file->errorString());
+                QMessageBox::information(0, "Error opening file", file->errorString());
             }
 
             QTextStream out(file);
