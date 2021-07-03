@@ -1,9 +1,10 @@
 # Morse translate
-Morse translate is instant translator of the Latin alphabet and some more [characters(1)](#all_symbols) into Morse code and back on the operating system Windows 7, Windows 10.
+Morse translate is instant translator of the Latin alphabet and some more [characters(1)](#all_symbols) into Morse code and back on the operating system Windows 7, Windows 8, Windows 10.
 
 ## Platforms
 * [C++11](https://en.wikipedia.org/wiki/C%2B%2B11) standard
 * Qt Framework version [5.15.0](https://wiki.qt.io/Qt_5.15_Release)
+* [MinWG](https://ru.wikipedia.org/wiki/MinGW)
 
 ## Download and use
 First you need to [download](https://github.com/dzmitryZhuk/Morse_translate/archive/refs/heads/master.zip) archive and unpack it to a convenient place.
@@ -45,11 +46,12 @@ More information on working with the Qt framework can be found [here](https://do
 --------------------------------------------------
 
 # Переводчик Морзе
-Переводчик морзе выполняет мгновенный перевод латинского алфавита и еще некоторых [символов(1)](#all_symbols) в азбуку Морзе и обратно в операционной системе Windows 7, Windows 10.
+Переводчик морзе выполняет мгновенный перевод латинского алфавита и еще некоторых [символов(1)](#all_symbols) в азбуку Морзе и обратно в операционной системе Windows 7, Windows 8, Windows 10.
 
 ## Платформы
 * [C++11](https://en.wikipedia.org/wiki/C%2B%2B11) standart 
 * Qt Framework version [5.15.0](https://wiki.qt.io/Qt_5.15_Release)
+* [MinWG](https://ru.wikipedia.org/wiki/MinGW)
 
 ## Скачивание и использование
 Для начала нужно [скачать](https://github.com/dzmitryZhuk/Morse_translate/archive/refs/heads/master.zip) архив и распаковать в удобноее место. 
