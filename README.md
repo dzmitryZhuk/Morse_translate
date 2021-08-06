@@ -46,7 +46,7 @@ More information on working with the Qt framework can be found [here](https://do
 --------------------------------------------------
 
 # Переводчик Морзе
-Переводчик морзе выполняет мгновенный перевод латинского алфавита и еще некоторых [символов(1)](#all_symbols) в азбуку Морзе и обратно в операционной системе Windows 7, Windows 8, Windows 10.
+Переводчик морзе выполняет мгновенный перевод латинского алфавита и еще некоторых [символов(1)](#all_symbols_ru) в азбуку Морзе и обратно в операционной системе Windows 7, Windows 8, Windows 10.
 
 ## Платформы
 * [C++11](https://en.wikipedia.org/wiki/C%2B%2B11) standart 
@@ -59,7 +59,7 @@ More information on working with the Qt framework can be found [here](https://do
 
 ![alt text](screenshot_1.png)
 
-В ней находится 2 папки: `x32` для 32-битной версии Windows и `x64` для 64-битной соответственно. В этих папкай и находятся необходимые [исполняемые файлы(2)](#error_opening_exe).
+В ней находится 2 папки: `x32` для 32-битной версии Windows и `x64` для 64-битной соответственно. В этих папкай и находятся необходимые [исполняемые файлы(2)](#error_opening_exe_ru).
 
 ![alt text](screenshot_2.png)
 
@@ -82,10 +82,10 @@ More information on working with the Qt framework can be found [here](https://do
 *
 *
 *
-<a name="all_symbols"/>
+<a name="all_symbols_ru"/>
 
 (1) Весь перечень переводимых символов можно найти в [методе initDictionary() класса Translator в файле translator.cpp](https://github.com/dzmitryZhuk/Morse_translate/blob/3bfdde0ad5473332d514fadfbfe8ef6bf92ea835/Morse%20translate/source/translator.cpp#L8)
 
-<a name="error_opening_exe"/>
+<a name="error_opening_exe_ru"/>
 
 (2) В случае ошибки открытия исполняемых файлов — можете написать на почту dzmitry.zhuk@the-akatsuki.ru
