@@ -41,7 +41,7 @@ More information on working with the Qt framework can be found [here](https://do
 
 <a name="error_opening_exe"/>
 
-(2) In case of an error opening executable files - write to the mail dzmitry.zhuk@the-akatsuki.ru
+(2) In case of an error opening executable files - write to the mail dzmitry.zhuk@bk.ru
 
 --------------------------------------------------
 
@@ -88,4 +88,4 @@ More information on working with the Qt framework can be found [here](https://do
 
 <a name="error_opening_exe_ru"/>
 
-(2) В случае ошибки открытия исполняемых файлов — можете написать на почту dzmitry.zhuk@the-akatsuki.ru
+(2) В случае ошибки открытия исполняемых файлов — можете написать на почту dzmitry.zhuk@bk.ru
